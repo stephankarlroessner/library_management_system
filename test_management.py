@@ -223,4 +223,11 @@ def test_borrow_return_then_another_member_borrows():
     assert book in bob.borrowed_books
     assert book not in alice_plant.borrowed_books
 
+    bob.return_book(book)
+
+    alice_plant.borrow_book(book)
+    assert book.available is False
+    assert book in alice_plant.borrowed_books
+    assert book not in bob.borrowed_books
+
 
