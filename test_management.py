@@ -225,6 +225,7 @@ def test_borrow_return_then_another_member_borrows():
 
     bob.return_book(book)
 
+# this is more E2E testing
     alice_plant.borrow_book(book)
     assert book.available is False
     assert book in alice_plant.borrowed_books

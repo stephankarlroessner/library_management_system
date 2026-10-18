@@ -21,4 +21,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest -v
+          pytest -vv -ra --tb=short
